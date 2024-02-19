@@ -1,0 +1,24 @@
+<h1>Componentes dinámimcos</h1>
+<div>
+<label>Género : </label>
+<br>
+@for(elemento of generos; track $index){
+    <label>{{elemento}}</label>
+    <input type="radio" name="genero" [(ngModel)]="genero" value="{{elemento}}">
+}
+<br>
+<label>Nacionalidades : </label>
+<select [(ngModel)]="nacionalidad">
+    @for(elemento of nacionalidades; track $index){
+        <option>{{elemento}}</option>
+    }
+</select>
+<label>Lenguajes de programación</label>
+@for(elemento of lenguajesProgramacion; track $index){
+    <label>{{elemento}}</label>
+    <input type="checkbox" value="{{elemento}}" />
+}
+<br>
+<button (click)="mostrarInfo()">Mostrar información</button>
+
+</div>

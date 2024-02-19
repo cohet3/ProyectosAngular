@@ -1,0 +1,28 @@
+<h1>Reserva tu vuelo CHiki</h1>
+<div>
+    <label>Origen: </label>
+    <select [(ngModel)]="origen">
+        @for(elemento of origenes; track $index){
+            <option>{{elemento}}</option>
+        }
+    </select>
+    <br>
+    <label>Destino: </label>
+    <select [(ngModel)]="destino">
+        @for(elemento of destinos; track $index){
+            <!-- con un if se puede evitar que se repitan las ciudades utilizando un mismo array para las ciudades -->
+            <option>{{elemento}}</option>
+        }
+    </select>
+    <br>
+    <label>Fecha Ida: </label>
+    <input type="date" value="fechaIda" [(ngModel)]="fechaIda"/>
+    <br>
+    <label>Fecha Vuelto: </label>
+    <input type="date" value="fechaVuelta" [(ngModel)]="fechaVuelta"/>
+    <br>
+    <label>Número Pasajeros: </label>
+    <input type="number"  value="numPasajeros" [(ngModel)]="numeroPasajeros"/>
+    <br>
+    <button (click)="realizarReserva()">Reservar</button>
+</div>
