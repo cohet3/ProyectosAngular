@@ -1,0 +1,25 @@
+<h1>Inmobilaria Futuro</h1>
+<div>
+  <table>
+    <tr>
+      <th>Referencia</th>
+      <th>Imagen</th>
+      <th>Descripcion</th>
+    </tr>
+    @for(elemento of inmuebles; track elemento.referencia) {
+    <tr>
+      <a
+        routerLink="/detalle"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        <td>{{ elemento.referencia }}</td>
+       
+        <td><img src="{{ elemento.img }}" alt="" /></td>
+        <td>{{ elemento.descripcion }}</td>
+      </a>
+      <router-outlet></router-outlet>
+    </tr>
+    }
+  </table>
+</div>

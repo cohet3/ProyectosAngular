@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 * {
     font-family:roboto;
     margin: 10px;
@@ -6,10 +6,10 @@
     
 }
 :root{
-    color-scheme: light dark;
+    color-scheme: rgb(58, 57, 57);
 }
 h1 {
-    color: coral;
+    color: electricblue;
     text-align: center;
 }
 
