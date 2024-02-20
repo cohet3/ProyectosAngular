@@ -9,9 +9,13 @@
       <th>precio</th>
     </tr>
 
-        @for(elemento of productos; track elemento.id) {
+        @for(elemento of productos; track elemento.productoId) {
             <tr>
-            <td>{{elemento.id}}</td>
+            <td>
+              <a [routerLink]="['/detalle', elemento.productoId]">
+                {{elemento.productoId}}
+              </a>
+            </td>
             <td>{{elemento.nombre}}</td>
             <td>{{elemento.descripcion}}</td>
             <td><img src="{{elemento.img}}" alt=""></td>
