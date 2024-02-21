@@ -1,13 +1,18 @@
-
+<img width="100%" src="https://www.itwise.es/wp-content/uploads/2019/11/NUEVA-4-1080x675.jpg" alt="Johao">
 @for(elemento of articulos; track elemento.id){
 <div class="gallery">
-    <a [routerLink]="['/detalle', elemento.id]">
-      <img src="{{elemento.imagen}}" alt="{{elemento.titulo}}" width="600" height="400">
-      <br>
-    </a>
-    <div class="desc titulo">{{elemento.titulo}}</div>
-    <div class="desc">{{elemento.resumen}}</div>
-    <button class="button2">Más Información</button>
- 
-  </div>
+  <img
+    src="{{ elemento.imagen }}"
+    alt="{{ elemento.titulo }}"
+    width="600"
+    height="400"
+  />
+
+  <div class="desc titulo">{{ elemento.titulo }}</div>
+  <div class="desc">{{ elemento.resumen }}</div>
+  <a [routerLink]="['/detalle', elemento.id]">
+    <button class="button button2">Más Información</button>
+  </a>
+</div>
 }
+
