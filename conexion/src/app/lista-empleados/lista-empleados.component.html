@@ -21,4 +21,8 @@
         </tr>
     }
 </table>
-<app-alta-empleado></app-alta-empleado>
+<button routerLink="alta">
+    Alta de un nuevo empleado
+</button>
+<router-outlet></router-outlet>
+<app-alta-empleado (avisoPadre)="recibirAviso($event)"></app-alta-empleado>
